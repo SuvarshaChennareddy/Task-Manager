@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    <div class="header">
+        <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+    </div>
+
+    <div class="dashboard-container">
+        <h1>Your Tasks</h1>
+
+        <div class="form-wrapper">
+            <form action="{{ url_for('add_task') }}" method="post" class="task-form">
+                <input type="text" name="title" placeholder="Title" required>
+                <textarea name="description" placeholder="Description"></textarea>
+                <input type="date" name="due_date">
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        {% for task in tasks %}
+            <div class="task">
+                <h3>{{ task['title'] }}</h3>
+                <p>{{ task['description'] }}</p>
+                <p>Due: {{ task['due_date'] }} | Status: {{ task['status'] }}</p>
+                <div class="actions">
+                    <a href="{{ url_for('complete_task', task_id=task['id']) }}">Complete</a>
+                    <a href="{{ url_for('delete_task', task_id=task['id']) }}">Delete</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

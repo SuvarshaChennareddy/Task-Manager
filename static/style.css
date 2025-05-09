@@ -1,0 +1,206 @@
+/* ===== Base Styles ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f8f9fa;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+/* ===== Header Styles ===== */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem 2rem;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logout-button {
+    background-color: #e53e3e;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logout-button:hover {
+    background-color: #c53030;
+    transform: translateY(-1px);
+}
+
+/* ===== Dashboard Styles ===== */
+.dashboard-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.task-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2.5rem;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form button {
+    width: 100%;
+    padding: 0.875rem;
+    margin-bottom: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.task-form button {
+    background-color: #4299e1;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.task-form button:hover {
+    background-color: #3182ce;
+}
+
+.task {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.task h3 {
+    color: #2d3748;
+    margin: 0 0 0.5rem 0;
+}
+
+.actions a {
+    color: #4299e1;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.actions a:hover {
+    color: #3182ce;
+    text-decoration: underline;
+}
+
+/* ===== Auth Pages Styles ===== */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.auth-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 440px;
+    margin: 2rem 0;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.auth-header h1 {
+    color: #1a365d;
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group svg {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #718096;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 2.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+.auth-button {
+    width: 100%;
+    padding: 1rem;
+    background: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.auth-button:hover {
+    background: #3182ce;
+    transform: translateY(-1px);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #718096;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 640px) {
+    .dashboard-container {
+        padding: 0 1rem;
+    }
+    
+    .auth-card {
+        padding: 1.5rem;
+    }
+    
+    .header {
+        padding: 1rem;
+    }
+}
+
+/* ===== Utility Classes ===== */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
